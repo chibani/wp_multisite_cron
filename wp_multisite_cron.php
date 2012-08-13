@@ -197,7 +197,7 @@ class wp_multisite_cron{
 		    		$chs[$blog_id]=curl_init();
 		    		curl_setopt($chs[$blog_id], CURLOPT_URL, $cron_url);
 		    		curl_setopt($chs[$blog_id], CURLOPT_HEADER, 0);
-		    		curl_multi_add_handle($mh, $ch);
+		    		curl_multi_add_handle($mh, $chs[$blog_id]);
 		    	}
 	    	
 		    	//Launch :)
